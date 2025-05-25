@@ -12,7 +12,7 @@ jobs:
 
       - name: Read file contents
         id: read_file
-        uses: satya-500/read-file-github-action@v1
+        uses: MblProjectR19T24/ostad_project@v1
         with:
           path: "hello.txt"
       - name: File contents
