@@ -1,0 +1,19 @@
+name: "Read file contents"
+
+on: 
+  push:
+    branches: [ "master" ]
+jobs:
+  file_contents:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Read file contents
+        id: read_file
+        uses: satya-500/read-file-github-action@v1
+        with:
+          path: "hello.txt"
+      - name: File contents
+        run: echo "${ steps.read_file.outputs.contents }"
